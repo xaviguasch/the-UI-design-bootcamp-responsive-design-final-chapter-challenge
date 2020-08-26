@@ -115,6 +115,25 @@ blockquote p {
     margin-right: 0;
   }
 }
+@media (min-width: 600px) {
+  ul.testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1em;
+  }
+  ul.testimonials li {
+    margin: 0;
+  }
+
+  ul.testimonials li:nth-of-type(3) {
+    grid-area: 2 / 1 / -1 / -1;
+  }
+
+  img {
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+}
 
 /*
 
@@ -130,7 +149,7 @@ blockquote p {
 
 /* For the width display, ignore this */
 
-.width-container {
+/* .width-container {
   display: none;
 }
 
@@ -142,4 +161,4 @@ blockquote p {
   background-color: #e6e6e6;
   padding: 0.3em;
   font-size: 0.85em;
-}
+} */
